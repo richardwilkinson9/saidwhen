@@ -125,6 +125,21 @@ mark.w{background:transparent;font-weight:600;text-decoration:underline;
   line-height:1.7;color:var(--soft);background:var(--raised);border:1px solid var(--rule);
   padding:1.2rem;border-radius:2px;max-height:34rem;overflow-y:auto}
 
+.lvl{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.1rem .34rem;border-radius:2px;border:1px solid;white-space:nowrap;margin-left:.4rem}
+.lvl-notable{color:var(--del);border-color:color-mix(in srgb,var(--del) 45%,transparent);
+  background:var(--del-bg)}
+.lvl-substantial{color:var(--soft);border-color:var(--rule)}
+.lvl-routine{color:var(--muted);border-color:var(--rule-soft)}
+.lvl-tooling{color:var(--muted);border-color:var(--rule-soft);font-style:italic}
+.gen{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);margin-left:.4rem;white-space:nowrap}
+.callout{border:1px solid var(--rule);border-left-width:3px;background:var(--raised);
+  padding:.85rem 1.1rem;border-radius:2px;margin-bottom:1.6rem}
+.callout.lvl-notable{border-left-color:var(--del)}
+.callout p{margin:.4rem 0 0;font-size:.95rem;color:var(--soft)}
+.lvl-row{display:flex;align-items:center;gap:.1rem;flex-wrap:wrap;margin-left:-.4rem}
+
 .tag{font-family:var(--mono);font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;
   border:1px solid var(--rule);color:var(--muted);padding:.12rem .38rem;border-radius:2px;
   white-space:nowrap}
@@ -187,9 +202,10 @@ export function page({ title, description, path, nav, checked, head = '' }, body
 </div></div></header>
 <main>${body}</main>
 <footer class="site"><div class="wrap">
-  <a href="https://github.com/richardwilkinson9/saidwhen">Source and raw archive on GitHub</a>
-  &nbsp;·&nbsp; <a href="/feed.xml">RSS</a>
+  <a href="/archive/">Raw archive</a>
   &nbsp;·&nbsp; <a href="/index.json">JSON</a>
+  &nbsp;·&nbsp; <a href="/feed.xml">RSS</a>
+  &nbsp;·&nbsp; <a href="/about/">How it works</a>
   <p class="fnote">Archived documents remain the copyright of their publishers, reproduced here
   as a factual record of what was published and when, with the source URL on every file.
   Nothing on this site is interpreted or summarised — the diff is the record. Not affiliated

@@ -1,0 +1,16 @@
+{
+  "ade3cd1c9ed6c239907924054af368e39eb4069f": {
+    "doc": "mistral/terms-of-use",
+    "significance": "tooling",
+    "why": "Extraction rewritten to collapse whitespace deterministically, after the same page served twice produced a 108-line diff of identical prose.",
+    "summary": null,
+    "summary_generated": false
+  },
+  "b628bd2cad4f8a1d8453d7c6569cc6d5ee4e0a26": {
+    "doc": "meta/llama-use-policy",
+    "significance": "tooling",
+    "why": "Captured from GitHub Actions under the older, non-deterministic extractor; the apparent change is line-breaking, not content.",
+    "summary": null,
+    "summary_generated": false
+  }
+}

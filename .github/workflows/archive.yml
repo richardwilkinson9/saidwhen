@@ -23,6 +23,18 @@ jobs:
       - name: Fetch every source
         run: node scripts/archive.mjs | tee /tmp/run.log
 
+      - name: Describe and flag whatever changed
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          # Significance flags are computed deterministically and always run.
+          # The plain-English summary needs a model; without one the flags still
+          # ship and the summary is simply absent rather than invented.
+          if [ -n "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            npm install -g @anthropic-ai/claude-code >/dev/null 2>&1 || true
+          fi
+          node scripts/summarise.mjs
+
       - name: Commit whatever moved
         run: |
           git config user.name "saidwhen-archiver"

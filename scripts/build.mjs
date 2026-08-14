@@ -25,6 +25,10 @@ const git = (...args) =>
 
 const sources = JSON.parse(readFileSync(new URL('sources.json', root), 'utf8')).sources;
 
+const notes = existsSync(new URL('data/summaries.json', root))
+  ? JSON.parse(readFileSync(new URL('data/summaries.json', root), 'utf8'))
+  : {};
+
 /* ---------------------------------------------------------------- history */
 
 const docs = [];
@@ -60,6 +64,7 @@ for (const src of sources) {
     const { added, removed } = countChanges(rows);
     if (!added && !removed) continue;
     changes.push({
+      note: notes[versions[i].sha] ?? null,
       sha: versions[i].sha,
       short: versions[i].short,
       date: versions[i].date,
@@ -100,6 +105,20 @@ const ago = (iso) => {
   if (h < 24) return `${h}h ago`;
   const d = Math.floor(h / 24);
   return d < 30 ? `${d}d ago` : `${Math.floor(d / 30)}mo ago`;
+};
+
+const LEVEL = {
+  notable:     ['what changed matters', 'lvl-notable'],
+  substantial: ['large revision', 'lvl-substantial'],
+  routine:     ['routine', 'lvl-routine'],
+  tooling:     ['our formatting, not theirs', 'lvl-tooling'],
+};
+
+const chip = (note) => {
+  if (!note) return '';
+  const [label, cls] = LEVEL[note.significance] ?? ['', ''];
+  if (!label) return '';
+  return `<span class="lvl ${cls}">${esc(label)}</span>`;
 };
 
 const delta = (added, removed) =>
@@ -208,10 +227,16 @@ const blocked = docs.filter((d) => d.status === 'blocked');
 }
 
 function entry(c) {
+  const n = c.note;
+  const line = n?.summary
+    ? `${esc(n.summary)} <span class="gen">generated</span>`
+    : n?.significance === 'tooling'
+      ? 'A change to how this archive extracts text — not to the document itself.'
+      : `${esc(c.doc.org)} — ${esc(c.doc.kind)} changed`;
   return `<a class="entry" href="/documents/${esc(c.doc.id)}/${esc(c.short)}/">
     <span class="when">${esc(fmtDate(c.date))}</span>
-    <span class="what">${esc(c.doc.org)} — ${esc(c.doc.kind)} changed
-      <span class="who">${esc(c.doc.id)}</span></span>
+    <span class="what">${line}
+      <span class="who">${esc(c.doc.org)} · ${esc(c.doc.kind)} ${chip(n)}</span></span>
     <span class="delta">${delta(c.added, c.removed)}</span>
   </a>`;
 }
@@ -268,7 +293,7 @@ function entry(c) {
       worked around by pretending to be a browser — an archive whose own conduct is questionable
       is worth less than no archive.</p>` : ''}
     <p style="margin-top:2rem"><a class="btn"
-      href="https://github.com/richardwilkinson9/saidwhen/blob/master/sources.json">Suggest a document →</a></p>
+      href="/sources.json">The full source list →</a></p>
   </section></div>`;
   write('documents/index.html', page({
     ...base, title: 'Documents — saidwhen',
@@ -318,12 +343,19 @@ for (const d of docs) {
       <p class="sans muted" style="font-size:.83rem;margin-bottom:1rem">
         <a href="/documents/${esc(d.id)}/">← ${esc(d.org)} — ${esc(d.kind)}</a></p>
       <div class="kicker" style="margin-bottom:.7rem">Observed ${esc(fmtDateLong(c.date))}</div>
-      <h1 style="font-size:1.9rem;margin-bottom:.7rem">${c.added + c.removed} line${
-        c.added + c.removed === 1 ? '' : 's'} changed</h1>
+      <h1 style="font-size:1.9rem;margin-bottom:.7rem">${
+        c.note?.summary ? esc(c.note.summary)
+        : c.note?.significance === 'tooling'
+          ? 'A change to how this archive extracts text'
+          : `${c.added + c.removed} line${c.added + c.removed === 1 ? '' : 's'} changed`}</h1>
+      ${c.note ? `<div class="callout ${LEVEL[c.note.significance]?.[1] ?? ''}">
+        <div class="lvl-row">${chip(c.note)}${c.note.summary_generated
+          ? '<span class="gen">summary written by a model — check it against the diff below</span>' : ''}</div>
+        <p>${esc(c.note.why)}</p>
+      </div>` : ''}
       <p class="mono muted" style="font-size:.76rem;margin-bottom:1.8rem">
         ${delta(c.added, c.removed)} &nbsp;·&nbsp; ${esc(c.prev)} → ${esc(c.short)}
-        &nbsp;·&nbsp; <a href="https://github.com/richardwilkinson9/saidwhen/commit/${esc(c.sha)}"
-          rel="noopener" target="_blank">commit</a>
+        &nbsp;·&nbsp; <span title="commit in the archive history">${esc(c.sha.slice(0, 12))}</span>
         &nbsp;·&nbsp; <a href="${esc(d.url)}" rel="nofollow noopener" target="_blank">live page</a></p>
       <div class="diff">
         <div class="hd"><span>${esc(d.id)}.txt</span><span>${esc(fmtDate(c.date))}</span></div>
@@ -348,7 +380,7 @@ for (const d of docs) {
     <div class="kicker" style="margin-bottom:.9rem">About</div>
     <h1 class="big" style="margin-bottom:1.2rem">How this works, and what it refuses to do</h1>
 
-    <p>Every source listed in <a href="https://github.com/richardwilkinson9/saidwhen/blob/master/sources.json"><code>sources.json</code></a>
+    <p>Every source listed in <a href="/sources.json"><code>sources.json</code></a>
     is fetched once a day, with an identifying user agent, honouring <code>robots.txt</code>. The
     HTML is reduced to plain text before storage, because a diff has to be readable by a human and
     raw HTML diffs drown in changed build hashes and reordered attributes.</p>
@@ -356,8 +388,13 @@ for (const d of docs) {
     <p>Each capture is committed to git. That is the entire mechanism — no database, no API, no
     service to go down. The history of the repository <em>is</em> the archive:</p>
 
-    <pre class="cmd">git clone https://github.com/richardwilkinson9/saidwhen
-git log -p archive/anthropic/usage-policy.txt</pre>
+    <pre class="cmd">curl -O https://saidwhen.org/saidwhen-archive.bundle
+git clone saidwhen-archive.bundle saidwhen
+cd saidwhen &amp;&amp; git log -p archive/anthropic/usage-policy.txt</pre>
+
+    <p>That bundle is the entire project — every version of every document, the code that
+    collected them, and this site's build. It depends on no host and no account. If this domain
+    disappears tomorrow, anyone holding a copy still has the whole record.</p>
 
     <h2 style="font-size:1.15rem;margin:2.4rem 0 .6rem">Three rules</h2>
 
@@ -382,8 +419,15 @@ git log -p archive/anthropic/usage-policy.txt</pre>
 
     <h2 style="font-size:1.15rem;margin:2.4rem 0 .6rem">Corrections</h2>
     <p>If something here misrepresents a document, the publisher is right and this archive is
-    wrong. <a href="https://github.com/richardwilkinson9/saidwhen/issues">Open an issue</a> and it
-    will be corrected, with the correction itself visible in the history.</p>
+    wrong. Corrections are made in the open and the correction itself stays visible in the
+    history — nothing here is quietly edited, including our own mistakes.</p>
+
+    <h2 style="font-size:1.15rem;margin:2.4rem 0 .6rem">Our own mistakes are in the record too</h2>
+    <p>When the way this archive extracts text changes, every document appears to change with it.
+    Those diffs are ours, not the publisher's, and they are labelled
+    <span class="lvl lvl-tooling" style="margin-left:0">our formatting, not theirs</span> wherever
+    they appear. They are kept rather than rewritten away, because an archive that edits its own
+    past is not an archive.</p>
   </section></div>`;
   write('about/index.html', page({
     ...base, title: 'About — saidwhen',
@@ -398,7 +442,7 @@ git log -p archive/anthropic/usage-policy.txt</pre>
     name: 'saidwhen',
     description: 'An archive of what AI companies said about their own systems, and when.',
     updated: lastRun,
-    repository: 'https://github.com/richardwilkinson9/saidwhen',
+    bundle: 'https://saidwhen.org/saidwhen-archive.bundle',
     documents: docs.map((d) => ({
       id: d.id, org: d.org, kind: d.kind, url: d.url,
       status: d.status ?? 'ok',
@@ -441,6 +485,18 @@ ${items}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `<url><loc>https://saidwhen.org${u}</loc></url>`).join('\n')}
 </urlset>\n`);
+}
+
+// The complete history as a single git bundle, served from this domain. Clone
+// it and you have every version of every document, the code that collected
+// them, and this build — with no dependency on any host, account or platform.
+// An archive that can only be obtained from one company's servers is one
+// account suspension away from not existing.
+try {
+  execFileSync('git', ['bundle', 'create', new URL('_site/saidwhen-archive.bundle', root).pathname, '--all'],
+    { cwd: root.pathname, stdio: 'ignore' });
+} catch (e) {
+  console.warn('could not write the history bundle:', e.message);
 }
 
 // The raw archive is served alongside the site, so every rendered page can link
