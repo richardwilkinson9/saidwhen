@@ -1,0 +1,65 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>saidwhen — an archive of what AI companies said, and when</title>
+<meta name="description" content="Usage policies, model cards, terms and deprecation notices from AI companies, fetched daily and kept in git. The history is the point.">
+<style>
+  :root { color-scheme: light dark }
+  body { max-width: 40rem; margin: 0 auto; padding: 3rem 1.25rem 6rem;
+         font: 16px/1.65 ui-serif, Georgia, serif }
+  h1 { font-size: 1.5rem; margin: 0 0 .25rem; letter-spacing: -.01em }
+  .sub { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; opacity: .6;
+         margin: 0 0 2.5rem }
+  h2 { font-size: 1rem; margin: 2.5rem 0 .5rem }
+  code, pre { font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace }
+  pre { padding: .8rem 1rem; overflow-x: auto;
+        background: color-mix(in srgb, currentColor 6%, transparent); border-radius: 3px }
+  a { color: inherit; text-underline-offset: 2px }
+  ul { padding-left: 1.1rem }
+  li { margin: .35rem 0 }
+  .note { font-size: 14px; opacity: .75 }
+</style>
+
+<h1>What AI companies said, and when they said it.</h1>
+<p class="sub">usage policies · model cards · terms · deprecation notices</p>
+
+<p>These documents are edited constantly and quietly. A clause is softened, a capability claim
+disappears, a permitted use becomes a prohibited one. The previous version simply stops
+existing — no changelog, no notice.</p>
+
+<p>This archive fetches them daily and keeps every version in git. The snapshot is not the
+point; the history is.</p>
+
+<pre><code>git clone https://github.com/richardwilkinson9/saidwhen
+git log -p archive/anthropic/usage-policy.txt</code></pre>
+
+<p>That command prints every change to Anthropic's usage policy, in order, with the date each
+was observed.</p>
+
+<h2>Currently archived</h2>
+<ul>
+  <li><a href="archive/anthropic/usage-policy.txt">Anthropic — usage policy</a></li>
+  <li><a href="archive/anthropic/model-deprecations.txt">Anthropic — model deprecations</a></li>
+  <li><a href="archive/google/gemini-prohibited-use.txt">Google — Gemini prohibited use policy</a></li>
+  <li><a href="archive/meta/llama-use-policy.txt">Meta — Llama use policy</a></li>
+  <li><a href="archive/mistral/terms-of-use.txt">Mistral — terms</a></li>
+</ul>
+<p class="note">OpenAI's policy pages return <code>403</code> to non-browser clients. That gap is
+recorded rather than worked around by pretending to be a browser — an archive whose own conduct
+is questionable is worth less than no archive.</p>
+
+<h2>What it will not do</h2>
+<p>Nothing is interpreted. No summaries, no "what this means", no view on whether a change is
+good or bad. The diff is the product.</p>
+<p>A failed fetch never overwrites a good snapshot. Replacing a real policy with a block page
+would be the one error this cannot afford.</p>
+
+<h2>Contributing</h2>
+<p>Adding a source is a pull request editing
+<a href="https://github.com/richardwilkinson9/saidwhen/blob/master/sources.json">sources.json</a>.
+Missing something is a gap; claiming coverage that isn't real would be worse.</p>
+
+<p class="note" style="margin-top:3rem">Archived documents remain the copyright of their
+publishers, reproduced as a factual record of what was published and when, with the source URL
+on every file. The code is MIT. If this project disappears, the git history is the whole thing
+and it is yours to keep.</p>
