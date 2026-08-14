@@ -133,7 +133,27 @@ for (const src of sources) {
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-    const text = toText(await res.text());
+    let text = toText(await res.text());
+
+    // Archive the document, not the page. Sidebars, cookie banners and nav
+    // menus change constantly and have nothing to do with what a company
+    // says — and they poison everything downstream: a sidebar link containing
+    // the word "cost" was flagged as a restriction being removed, and a cookie
+    // banner appearing was recorded as a change to a deprecation policy.
+    // Trimming to the document body removes that entire class of false alarm.
+    if (src.start_after) {
+      const i = text.indexOf(src.start_after);
+      if (i === -1) {
+        failed.push(`${src.id}: start marker ${JSON.stringify(src.start_after)} not found — keeping the previous snapshot rather than archiving the wrong region`);
+        continue;
+      }
+      text = text.slice(i);
+    }
+    if (src.stop_before) {
+      const i = text.indexOf(src.stop_before, 1);
+      if (i > 0) text = text.slice(0, i);
+    }
+    text = text.trim() + '\n';
 
     // A page that reduces to almost nothing is a JS-rendered shell or a block
     // page, not a policy. Writing it would destroy a good snapshot with a bad

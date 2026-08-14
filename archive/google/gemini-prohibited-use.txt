@@ -101,5 +101,3 @@ English
 - Svenska
 - Tiếng Việt
 - Türkçe
-Google apps
-Main menu

@@ -6,28 +6,36 @@
       "org": "Anthropic",
       "kind": "deprecations",
       "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
-      "must_contain": "Deprecat"
+      "must_contain": "Deprecat",
+      "start_after": "This page lists all API deprecations",
+      "stop_before": "Was this page helpful?"
     },
     {
       "id": "anthropic/usage-policy",
       "org": "Anthropic",
       "kind": "usage policy",
       "url": "https://www.anthropic.com/legal/aup",
-      "must_contain": "Usage Policy"
+      "must_contain": "Usage Policy",
+      "start_after": "Our Usage Policy",
+      "stop_before": "Related content"
     },
     {
       "id": "google/gemini-prohibited-use",
       "org": "Google",
       "kind": "usage policy",
       "url": "https://policies.google.com/terms/generative-ai/use-policy",
-      "must_contain": "Prohibited Use"
+      "must_contain": "Prohibited Use",
+      "start_after": "Generative AI Prohibited Use Policy",
+      "stop_before": "Google apps"
     },
     {
       "id": "meta/llama-use-policy",
       "org": "Meta",
       "kind": "usage policy",
       "url": "https://www.llama.com/llama3/use-policy/",
-      "must_contain": "Prohibited Uses"
+      "must_contain": "Prohibited Uses",
+      "start_after": "Acceptable Use Policy",
+      "stop_before": "Reporting bugs"
     },
     {
       "id": "mistral/terms-of-use",
