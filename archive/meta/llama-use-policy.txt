@@ -70,6 +70,100 @@ Stay updated
 
 Get started
 
+Products
+
+Muse Code
+
+Meta Model API
+
+Models
+
+Muse Spark 1.2
+
+Muse Spark 1.1
+
+Muse Glimmer
+
+Llama 4
+
+Llama 3
+
+Documentation
+
+Meta Model API Docs
+
+Muse Glimmer Docs
+
+Llama Docs
+
+Resources
+
+Cookbook
+
+Blog
+
+Videos
+
+Case studies
+
+FAQs
+
+Community
+
+Meta-Models Github
+
+Llama GitHub
+
+Hugging Face
+
+Terms & policies
+
+Terms of Service
+
+Privacy Policy
+
+Cookie Policy
+
+Products
+
+Muse Code
+
+Meta Model API
+
+Models
+
+Muse Spark 1.2
+Muse Spark 1.1
+Muse Glimmer
+Llama 4
+Llama 3
+
+Documentation
+
+Meta Model API Docs
+Muse Glimmer Docs
+Llama Docs
+
+Resources
+
+Cookbook
+Blog
+Videos
+Case studies
+FAQs
+
+Community
+
+Meta-Models Github
+Llama GitHub
+Hugging Face
+
+Terms & policies
+
+Terms of Service
+Privacy Policy
+Cookie Policy
+
 Llama 3
 
 Acceptable Use Policy
@@ -123,97 +217,3 @@ https://facebook.com/whitehat/info/
 - Reporting violations of the Acceptable Use Policy or unlicensed uses of Llama:
 
 LlamaUseReport@meta.com
-
-Products
-
-Muse Code
-
-Meta Model API
-
-Models
-
-Muse Spark 1.2
-
-Muse Spark 1.1
-
-Muse Glimmer
-
-Llama 4
-
-Llama 3
-
-Documentation
-
-Meta Model API Docs
-
-Muse Glimmer Docs
-
-Llama Docs
-
-Resources
-
-Cookbook
-
-Blog
-
-Videos
-
-Case studies
-
-FAQs
-
-Community
-
-Meta-Models Github
-
-Llama GitHub
-
-Hugging Face
-
-Terms & policies
-
-Terms of Service
-
-Privacy Policy
-
-Cookie Policy
-
-Products
-
-Muse Code
-
-Meta Model API
-
-Models
-
-Muse Spark 1.2
-Muse Spark 1.1
-Muse Glimmer
-Llama 4
-Llama 3
-
-Documentation
-
-Meta Model API Docs
-Muse Glimmer Docs
-Llama Docs
-
-Resources
-
-Cookbook
-Blog
-Videos
-Case studies
-FAQs
-
-Community
-
-Meta-Models Github
-Llama GitHub
-Hugging Face
-
-Terms & policies
-
-Terms of Service
-Privacy Policy
-Cookie Policy
