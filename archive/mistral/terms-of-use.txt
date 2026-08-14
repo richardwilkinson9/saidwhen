@@ -1,0 +1,109 @@
+# Mistral — terms
+# source: https://mistral.ai/terms/#terms-of-use
+# archived by saidwhen.org — git history is the record; see `git log -p` on this file
+# ---
+
+Terms | Mistral AI
+Legal Center
+
+- Terms
+
+- AI Governance
+
+Welcome to our Legal Center !
+Effective: November 28, 2025
+
+Terms
+Get started
+
+For Consumers
+
+- EU - Terms of Service
+
+- ROW - Terms of Service
+
+For Commercial Customers
+
+- Commercial Terms of Service
+
+- Additional Product Terms
+
+- Partner-served deployment terms
+
+- Additional Terms for Use of Mistral AI Products on Customer Infrastructure
+
+- Data Processing Addendum
+
+For Partners
+
+- Connectors terms
+
+For Everyone
+
+- Privacy Policy
+
+- Usage Policy
+
+- Cookie Policy
+
+- License Notice
+
+- Applicant Privacy Policy
+
+At Mistral AI, transparency, trust, and clarity are at the core of our relationship with you, whether you're a customer, an end-user, a business partner, a researcher, or simply exploring our products. To ensure you have easy access to the information you’re looking for, we’ve centralized our key legal documents in one place.
+
+Below, you’ll find a quick overview of each document, so you can quickly locate what you need.
+
+If you’re a consumer:
+
+- Terms of Service for consumers in the European Union
+
+- Terms of Service for consumers outside the European Union
+
+If you’re a commercial customer:
+
+- Commercial Terms of Service
+
+- Additional Terms
+
+- Partner-Served deployment terms
+
+- Data Processing Addendum
+
+If you’re a business partner:
+
+- Connector Terms
+
+For everyone using our products:
+
+- Privacy Policy
+
+- Cookie Policy
+
+- Usage Policy
+
+- License Notice
+
+Need Help?
+
+If you have questions about which terms apply to you or need further clarification, feel free to contact us . We’re here to help!
+
+Mistral AI © 2026 Mistral AI
+
+AI Compliance Hub
+
+- Models
+
+- AI Systems
+
+Terms
+
+- Mistral Legal Terms
+
+- Legal Notice
+
+- Privacy Policy
+
+Terms
+
+View all models

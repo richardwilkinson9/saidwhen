@@ -1,0 +1,44 @@
+{
+  "note": "Every URL archived here is a public page a company publishes about its own AI systems. Fetched politely, once per cycle, honouring robots.txt. Nothing is scraped that is not offered publicly.",
+  "sources": [
+    {
+      "id": "anthropic/model-deprecations",
+      "org": "Anthropic",
+      "kind": "deprecations",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      "id": "anthropic/usage-policy",
+      "org": "Anthropic",
+      "kind": "usage policy",
+      "url": "https://www.anthropic.com/legal/aup"
+    },
+    {
+      "id": "google/gemini-prohibited-use",
+      "org": "Google",
+      "kind": "usage policy",
+      "url": "https://policies.google.com/terms/generative-ai/use-policy"
+    },
+    {
+      "id": "meta/llama-use-policy",
+      "org": "Meta",
+      "kind": "usage policy",
+      "url": "https://www.llama.com/llama3/use-policy/"
+    },
+    {
+      "id": "mistral/terms-of-use",
+      "org": "Mistral",
+      "kind": "terms",
+      "url": "https://mistral.ai/terms/#terms-of-use",
+      "note": "Legal centre is an index; needs verifying that the deep link resolves to the document itself."
+    },
+    {
+      "id": "openai/usage-policies",
+      "org": "OpenAI",
+      "kind": "usage policy",
+      "url": "https://openai.com/policies/usage-policies/",
+      "status": "blocked",
+      "note": "Returns HTTP 403 to any non-browser client. Not evading it \u2014 bot protection is a refusal and gets treated as one. Left in the list so the gap stays visible rather than being quietly dropped."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+name: Archive
+
+# The whole project. Fetch each source, reduce it to text, commit any change.
+# Git history is the archive — no database, no credentials, nothing to expire.
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch every source
+        run: node scripts/archive.mjs | tee /tmp/run.log
+
+      - name: Commit whatever moved
+        run: |
+          git config user.name "saidwhen-archiver"
+          git config user.email "archive@saidwhen.org"
+          if git diff --quiet; then
+            echo "nothing changed today"
+            exit 0
+          fi
+          # Name the documents that actually moved, so the commit log alone
+          # reads as a history of what changed and when.
+          MOVED=$(git diff --name-only | sed 's|archive/||;s|\.txt$||' | paste -sd ', ' -)
+          git add -A
+          git commit -m "archive: ${MOVED}"
+          git push
