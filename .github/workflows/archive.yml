@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   archive:
@@ -36,3 +37,9 @@ jobs:
           git add -A
           git commit -m "archive: ${MOVED}"
           git push
+          # A commit made with GITHUB_TOKEN does not trigger other workflows,
+          # so the site would show yesterday's archive until someone pushed by
+          # hand. Kick the build explicitly.
+          gh workflow run pages.yml || echo "could not dispatch the site build"
+        env:
+          GH_TOKEN: ${{ github.token }}
