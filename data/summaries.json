@@ -12,5 +12,19 @@
     "why": "Captured from GitHub Actions under the older, non-deterministic extractor; the apparent change is line-breaking, not content.",
     "summary": null,
     "summary_generated": false
+  },
+  "634ecd60fbed1342ffbcc4e27ccdc2847f84206d": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Navigation only — a new \"Optimizing for cost and intelligence\" link was added to the docs sidebar menu.",
+    "summary_generated": true
+  },
+  "2795baa1cf9081015913389ebd20bae896b3c07c": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "This diff shows only a cookie-consent banner being added, not any change to Anthropic's model deprecation policy or dates.",
+    "summary_generated": true
   }
 }
