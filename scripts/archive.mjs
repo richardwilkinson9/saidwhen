@@ -15,7 +15,7 @@
  *
  * Zero dependencies, zero credentials. Runs anywhere Node runs.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { dirname } from 'node:path';
 
 const root = new URL('../', import.meta.url);
@@ -116,6 +116,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let changed = 0;
 let unchanged = 0;
 const failed = [];
+const held = [];
 
 for (const src of sources) {
   const dest = new URL(`archive/${src.id}.txt`, root);
@@ -178,7 +179,32 @@ for (const src of sources) {
       continue;
     }
 
+    // Corroboration. Meta produced two convincing-looking diffs from its first
+    // two fetches, and both were largely the same text relocated by a differing
+    // render — the page is not served identically to every client. An archive
+    // that reports those as a company editing its policy is crying wolf, and
+    // one false alarm costs more trust than a day of latency costs.
+    //
+    // So a difference is held as pending and only enters the record when a
+    // later fetch sees the same thing again. A change that is real persists; a
+    // rendering wobble does not.
+    if (prev !== null && prev !== body) {
+      const pendingPath = new URL(`.pending/${src.id}.txt`, root);
+      const pending = existsSync(pendingPath) ? readFileSync(pendingPath, 'utf8') : null;
+
+      if (pending !== body) {
+        mkdirSync(dirname(pendingPath.pathname), { recursive: true });
+        writeFileSync(pendingPath, body);
+        held.push(`${src.id}: differs from the record — held for corroboration, will be recorded if the next fetch agrees`);
+        continue;
+      }
+      // Seen twice running. It is real.
+      rmSync(pendingPath, { force: true });
+    }
+
     if (prev === body) {
+      // Whatever was pending disagreed with reality twice over; drop it.
+      rmSync(new URL(`.pending/${src.id}.txt`, root), { force: true });
       unchanged++;
     } else {
       mkdirSync(dirname(dest.pathname), { recursive: true });
@@ -193,7 +219,10 @@ for (const src of sources) {
   await sleep(1500); // One polite request at a time.
 }
 
-console.log(`\n${changed} changed, ${unchanged} unchanged, ${failed.length} failed`);
+console.log(
+  `\n${changed} changed, ${unchanged} unchanged, ${held.length} held for corroboration, ${failed.length} failed`
+);
+for (const h of held) console.log(`  ~ ${h}`);
 for (const f of failed) console.log(`  ! ${f}`);
 
 // A failed fetch must never look like "nothing changed". It leaves the previous
