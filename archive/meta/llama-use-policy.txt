@@ -41,6 +41,60 @@ Llama Defenders Program
 Developer use guide
 Stay updated
 Get started
+Products
+Muse Code
+Meta Model API
+Models
+Muse Spark 1.2
+Muse Spark 1.1
+Muse Glimmer
+Llama 4
+Llama 3
+Documentation
+Meta Model API Docs
+Muse Glimmer Docs
+Llama Docs
+Resources
+Cookbook
+Blog
+Videos
+Case studies
+FAQs
+Community
+Meta-Models Github
+Llama GitHub
+Hugging Face
+Terms & policies
+Terms of Service
+Privacy Policy
+Cookie Policy
+Products
+Muse Code
+Meta Model API
+Models
+Muse Spark 1.2
+Muse Spark 1.1
+Muse Glimmer
+Llama 4
+Llama 3
+Documentation
+Meta Model API Docs
+Muse Glimmer Docs
+Llama Docs
+Resources
+Cookbook
+Blog
+Videos
+Case studies
+FAQs
+Community
+Meta-Models Github
+Llama GitHub
+Hugging Face
+Terms & policies
+Terms of Service
+Privacy Policy
+Cookie Policy
 Llama 3
 Acceptable Use Policy
 Meta is committed to promoting safe and fair use of its tools and features, including Meta Llama 3. If you access or use Meta Llama 3, you agree to this Acceptable Use Policy (“ Policy ”). The most recent copy of this policy can be found at https://developer.meta.com/ai/llama3/use-policy .
@@ -84,57 +138,3 @@ https://developers.facebook.com/llama_output_feedback
 https://facebook.com/whitehat/info/
 - Reporting violations of the Acceptable Use Policy or unlicensed uses of Llama:
 LlamaUseReport@meta.com
-Products
-Muse Code
-Meta Model API
-Models
-Muse Spark 1.2
-Muse Spark 1.1
-Muse Glimmer
-Llama 4
-Llama 3
-Documentation
-Meta Model API Docs
-Muse Glimmer Docs
-Llama Docs
-Resources
-Cookbook
-Blog
-Videos
-Case studies
-FAQs
-Community
-Meta-Models Github
-Llama GitHub
-Hugging Face
-Terms & policies
-Terms of Service
-Privacy Policy
-Cookie Policy
-Products
-Muse Code
-Meta Model API
-Models
-Muse Spark 1.2
-Muse Spark 1.1
-Muse Glimmer
-Llama 4
-Llama 3
-Documentation
-Meta Model API Docs
-Muse Glimmer Docs
-Llama Docs
-Resources
-Cookbook
-Blog
-Videos
-Case studies
-FAQs
-Community
-Meta-Models Github
-Llama GitHub
-Hugging Face
-Terms & policies
-Terms of Service
-Privacy Policy
-Cookie Policy
