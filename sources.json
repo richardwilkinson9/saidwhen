@@ -5,32 +5,37 @@
       "id": "anthropic/model-deprecations",
       "org": "Anthropic",
       "kind": "deprecations",
-      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "must_contain": "Deprecat"
     },
     {
       "id": "anthropic/usage-policy",
       "org": "Anthropic",
       "kind": "usage policy",
-      "url": "https://www.anthropic.com/legal/aup"
+      "url": "https://www.anthropic.com/legal/aup",
+      "must_contain": "Usage Policy"
     },
     {
       "id": "google/gemini-prohibited-use",
       "org": "Google",
       "kind": "usage policy",
-      "url": "https://policies.google.com/terms/generative-ai/use-policy"
+      "url": "https://policies.google.com/terms/generative-ai/use-policy",
+      "must_contain": "Prohibited Use"
     },
     {
       "id": "meta/llama-use-policy",
       "org": "Meta",
       "kind": "usage policy",
-      "url": "https://www.llama.com/llama3/use-policy/"
+      "url": "https://www.llama.com/llama3/use-policy/",
+      "must_contain": "Prohibited Uses"
     },
     {
       "id": "mistral/terms-of-use",
       "org": "Mistral",
       "kind": "terms",
       "url": "https://mistral.ai/terms/#terms-of-use",
-      "note": "Legal centre is an index; needs verifying that the deep link resolves to the document itself."
+      "note": "Legal centre is an index; needs verifying that the deep link resolves to the document itself.",
+      "must_contain": "Terms"
     },
     {
       "id": "openai/usage-policies",

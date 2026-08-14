@@ -21,6 +21,9 @@ import { dirname } from 'node:path';
 const root = new URL('../', import.meta.url);
 const sources = JSON.parse(readFileSync(new URL('sources.json', root), 'utf8')).sources;
 
+/** Roughly the size of the comment header, so shrink comparisons look at content. */
+const HEADER_ALLOWANCE = 260;
+
 const UA =
   'saidwhen-archiver/0.1 (+https://saidwhen.org; archives public AI policy pages; one request per source per run)';
 
@@ -55,10 +58,22 @@ function toText(html) {
     .replace(/&ndash;/gi, '–')
     .replace(/&amp;/gi, '&');
 
-  // Collapse whitespace without collapsing paragraphs.
-  s = s.replace(/[ \t ]+/g, ' ');
-  s = s.replace(/ *\n */g, '\n');
-  s = s.replace(/\n{3,}/g, '\n\n');
+  // Collapse every run of whitespace containing a newline down to exactly one
+  // newline. This looks like it costs readability, and it does — but the same
+  // page served twice can differ purely in how many wrapper elements surround a
+  // block, and preserving paragraph spacing turned that into a 108-line diff of
+  // identical prose on the first day. Determinism beats prettiness: one block,
+  // one line, whatever markup it arrived in.
+  s = s.replace(/[^\S\n]+/g, ' ');
+  s = s.replace(/\s*\n\s*/g, '\n');
+
+  // Drop lines that are pure punctuation or a single stray character — residue
+  // from stripped icons and separators, which also comes and goes between
+  // renderings.
+  s = s
+    .split('\n')
+    .filter((l) => /[a-z0-9]/i.test(l))
+    .join('\n');
 
   return s.trim() + '\n';
 }
@@ -135,6 +150,34 @@ for (const src of sources) {
     const body = header + text;
 
     const prev = existsSync(dest) ? readFileSync(dest, 'utf8') : null;
+
+    // The length floor above is not enough on its own, and Meta proved it on
+    // day one: its page served nav and footer but dropped the entire policy
+    // body client-side, and 5,800 characters of chrome sailed past a 500-char
+    // check while the actual content silently vanished from the archive.
+    //
+    // So compare against what we already hold. A capture that has lost a third
+    // of the previous one is a rendering failure until proven otherwise —
+    // documents get edited, they do not evaporate.
+    if (prev && text.length < (prev.length - HEADER_ALLOWANCE) * 0.66) {
+      failed.push(
+        `${src.id}: new capture is ${text.length} chars vs ${prev.length} held — ` +
+        `lost a third or more, treating as a rendering failure and keeping the previous snapshot`
+      );
+      continue;
+    }
+
+    // Per-source proof that the substance is present. Cheap, exact, and the
+    // only thing that catches a page which shrinks gradually rather than all
+    // at once.
+    if (src.must_contain && !text.includes(src.must_contain)) {
+      failed.push(
+        `${src.id}: capture is missing its required marker ${JSON.stringify(src.must_contain)} — ` +
+        `keeping the previous snapshot`
+      );
+      continue;
+    }
+
     if (prev === body) {
       unchanged++;
     } else {
@@ -154,5 +197,11 @@ console.log(`\n${changed} changed, ${unchanged} unchanged, ${failed.length} fail
 for (const f of failed) console.log(`  ! ${f}`);
 
 // A failed fetch must never look like "nothing changed". It leaves the previous
-// snapshot in place, which is correct, but it has to be visible.
-if (failed.length) process.exitCode = 0;
+// snapshot in place, which is correct, but it has to be visible — and a guard
+// that fired is a louder signal than a network error, because it means a page
+// actively tried to replace good data with bad.
+if (failed.length) {
+  console.log(
+    `\n${failed.length} source(s) kept their previous snapshot rather than accept a bad capture.`
+  );
+}
