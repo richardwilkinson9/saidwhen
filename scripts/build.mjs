@@ -64,7 +64,7 @@ for (const src of sources) {
     const { added, removed } = countChanges(rows);
     if (!added && !removed) continue;
     changes.push({
-      note: notes[versions[i].sha] ?? null,
+      note: notes[`${versions[i].sha}:${src.id}`] ?? null,
       sha: versions[i].sha,
       short: versions[i].short,
       date: versions[i].date,
@@ -352,6 +352,7 @@ for (const d of docs) {
         <div class="lvl-row">${chip(c.note)}${c.note.summary_generated
           ? '<span class="gen">summary written by a model — check it against the diff below</span>' : ''}</div>
         <p>${esc(c.note.why)}</p>
+        ${c.note.caveat ? `<p class="caveat">${esc(c.note.caveat)}</p>` : ''}
       </div>` : ''}
       <p class="mono muted" style="font-size:.76rem;margin-bottom:1.8rem">
         ${delta(c.added, c.removed)} &nbsp;·&nbsp; ${esc(c.prev)} → ${esc(c.short)}

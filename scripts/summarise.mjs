@@ -22,8 +22,9 @@
  * primary, the summary is labelled, and a summary is never written for a change
  * whose diff is not published beside it.
  *
- * Results are cached by commit sha in data/summaries.json, so each change is
- * summarised once, ever.
+ * Results are cached in data/summaries.json under `<commit>:<document>`, so each
+ * change is summarised once, ever — and a single commit that touches several
+ * documents gets a separate note for each of them.
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -41,6 +42,32 @@ const TOOLING = (() => {
   const f = new URL('data/tooling-commits.json', root);
   return existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')).commits ?? {} : {};
 })();
+
+/**
+ * Before this commit, captures were whole pages — nav menus, sidebars and
+ * cookie banners included. Diffs from that era are still a true record of what
+ * was served, but they mix page furniture in with the document, which is why a
+ * sidebar link once got flagged as a restriction being removed.
+ *
+ * Those diffs are not deleted or re-flagged: rewriting the past to look tidier
+ * is exactly the failure this archive exists to catch other people doing. They
+ * are labelled instead, so a reader knows why a "notable" change reads as
+ * navigation.
+ */
+const DOC_TRIM_COMMIT = '21d6a9b75763eb52e5706d1da6b8c447b49cb47e';
+const PAGE_ERA_CAVEAT =
+  'Captured before saidwhen trimmed pages down to the document itself, so ' +
+  'navigation menus and cookie banners appear in this diff alongside the text ' +
+  'that matters. Later changes are the document only.';
+
+const isPageEra = (sha) => {
+  try {
+    git('merge-base', '--is-ancestor', DOC_TRIM_COMMIT, sha);
+    return false; // trimming already applied
+  } catch {
+    return true;
+  }
+};
 
 /* --------------------------------------------------------- significance */
 
@@ -170,13 +197,22 @@ for (const src of sources) {
     const { added, removed } = countChanges(rows);
     if (!added && !removed) continue;
 
-    const existing = cache[sha];
-    if (existing?.summary && existing?.significance) { reused++; continue; }
+    // Keyed by commit AND document: one commit can change several documents,
+    // and keying by sha alone let the last one summarised overwrite the rest —
+    // which put Meta's note on Anthropic's page.
+    const key = `${sha}:${src.id}`;
+    const existing = cache[key] ?? cache[sha];
+    if (existing?.summary && existing?.significance) {
+      // Cached before the caveat existed — label it without re-running a model.
+      if (!existing.caveat && isPageEra(sha)) existing.caveat = PAGE_ERA_CAVEAT;
+      reused++;
+      continue;
+    }
 
     // Our own reformatting is not a change to what the publisher said, and
     // must never be summarised as though it were.
     if (TOOLING[sha]) {
-      cache[sha] = {
+      cache[key] = {
         doc: src.id,
         significance: 'tooling',
         why: TOOLING[sha],
@@ -191,12 +227,13 @@ for (const src of sources) {
     const sig = significance(rows);
     const summary = existing?.summary ?? (canSummarise ? summarise(src, rows) : null);
 
-    cache[sha] = {
+    cache[key] = {
       doc: src.id,
       significance: sig.level,
       why: sig.why,
       summary: summary ?? null,
       summary_generated: summary ? true : false,
+      caveat: isPageEra(sha) ? PAGE_ERA_CAVEAT : undefined,
     };
     written++;
     console.log(`${sig.level.padEnd(11)} ${src.id}  ${summary ? '' : '(no summary)'}`);

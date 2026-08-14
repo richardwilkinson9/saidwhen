@@ -1,8 +1,9 @@
 {
-  "note": "Commits where the archive changed because the ARCHIVER changed, not because a publisher edited anything. These diffs are ours and are labelled as such on the site so they can never be mistaken for a company altering its own document. Detected by a commit touching both scripts/archive.mjs and archive/ \u2014 recorded here permanently rather than corrected by rewriting history, because an archive that edits its own past is not an archive.",
+  "note": "Commits where the archive changed because the ARCHIVER changed, not because a publisher edited anything. These diffs are ours and are labelled as such on the site so they can never be mistaken for a company altering its own document. Detected by a commit touching both scripts/archive.mjs and archive/ — recorded here permanently rather than corrected by rewriting history, because an archive that edits its own past is not an archive.",
   "commits": {
     "ade3cd1c9ed6c239907924054af368e39eb4069f": "Extraction rewritten to collapse whitespace deterministically, after the same page served twice produced a 108-line diff of identical prose.",
     "b628bd2cad4f8a1d8453d7c6569cc6d5ee4e0a26": "Captured from GitHub Actions under the older, non-deterministic extractor; the apparent change is line-breaking, not content.",
-    "f6ea79346ba684967eb89639f6ccff6895ed8112": "First capture \u2014 the documents entering the archive, not a change to them."
+    "f6ea79346ba684967eb89639f6ccff6895ed8112": "First capture — the documents entering the archive, not a change to them.",
+    "21d6a9b75763eb52e5706d1da6b8c447b49cb47e": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy — our extraction changed, the publisher's document did not."
   }
 }

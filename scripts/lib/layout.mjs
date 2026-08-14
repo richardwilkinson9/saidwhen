@@ -138,6 +138,8 @@ mark.w{background:transparent;font-weight:600;text-decoration:underline;
   padding:.85rem 1.1rem;border-radius:2px;margin-bottom:1.6rem}
 .callout.lvl-notable{border-left-color:var(--del)}
 .callout p{margin:.4rem 0 0;font-size:.95rem;color:var(--soft)}
+.callout p.caveat{font-size:.83rem;color:var(--muted);border-top:1px solid var(--rule-soft);
+  padding-top:.5rem;margin-top:.6rem}
 .lvl-row{display:flex;align-items:center;gap:.1rem;flex-wrap:wrap;margin-left:-.4rem}
 
 .tag{font-family:var(--mono);font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;
