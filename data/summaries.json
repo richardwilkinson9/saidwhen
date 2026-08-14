@@ -26,5 +26,12 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "This diff shows only a cookie-consent banner being added, not any change to Anthropic's model deprecation policy or dates.",
     "summary_generated": true
+  },
+  "21d6a9b75763eb52e5706d1da6b8c447b49cb47e": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 8 lines containing binding language went away. Loosenings are rarely announced.",
+    "summary": "The two captures differ only in navigation/UI boilerplate and updated deprecation-history dates (through 2026-06-05); no substantive policy change is shown.",
+    "summary_generated": true
   }
 }
