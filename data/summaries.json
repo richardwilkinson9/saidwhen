@@ -9,8 +9,8 @@
   "634ecd60fbed1342ffbcc4e27ccdc2847f84206d:anthropic/model-deprecations": {
     "doc": "anthropic/model-deprecations",
     "significance": "notable",
-    "why": "A restriction or obligation was removed or reworded \u2014 1 line containing binding language went away. Loosenings are rarely announced.",
-    "summary": "Navigation only \u2014 a new \"Optimizing for cost and intelligence\" link was added to the docs sidebar menu.",
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Navigation only — a new \"Optimizing for cost and intelligence\" link was added to the docs sidebar menu.",
     "summary_generated": true,
     "caveat": "Captured before saidwhen trimmed pages down to the document itself, so navigation menus and cookie banners appear in this diff alongside the text that matters. Later changes are the document only."
   },
@@ -25,7 +25,7 @@
   "21d6a9b75763eb52e5706d1da6b8c447b49cb47e:anthropic/model-deprecations": {
     "doc": "anthropic/model-deprecations",
     "significance": "tooling",
-    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy \u2014 our extraction changed, the publisher's document did not.",
+    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy — our extraction changed, the publisher's document did not.",
     "summary": null,
     "summary_generated": false
   },
@@ -39,7 +39,7 @@
   "21d6a9b75763eb52e5706d1da6b8c447b49cb47e:anthropic/usage-policy": {
     "doc": "anthropic/usage-policy",
     "significance": "tooling",
-    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy \u2014 our extraction changed, the publisher's document did not.",
+    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy — our extraction changed, the publisher's document did not.",
     "summary": null,
     "summary_generated": false
   },
@@ -53,7 +53,7 @@
   "21d6a9b75763eb52e5706d1da6b8c447b49cb47e:google/gemini-prohibited-use": {
     "doc": "google/gemini-prohibited-use",
     "significance": "tooling",
-    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy \u2014 our extraction changed, the publisher's document did not.",
+    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy — our extraction changed, the publisher's document did not.",
     "summary": null,
     "summary_generated": false
   },
@@ -74,23 +74,23 @@
   "634ecd60fbed1342ffbcc4e27ccdc2847f84206d:meta/llama-use-policy": {
     "doc": "meta/llama-use-policy",
     "significance": "notable",
-    "why": "A restriction or obligation was removed or reworded \u2014 1 line containing binding language went away. Loosenings are rarely announced.",
-    "summary": null,
-    "summary_generated": false,
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "The diff shows no changes — the two archived captures of the policy text are identical.",
+    "summary_generated": true,
     "caveat": "Captured before saidwhen trimmed pages down to the document itself, so navigation menus and cookie banners appear in this diff alongside the text that matters. Later changes are the document only."
   },
   "2795baa1cf9081015913389ebd20bae896b3c07c:meta/llama-use-policy": {
     "doc": "meta/llama-use-policy",
     "significance": "notable",
-    "why": "A restriction or obligation was removed or reworded \u2014 1 line containing binding language went away. Loosenings are rarely announced.",
-    "summary": null,
-    "summary_generated": false,
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "The two captures are identical — no substantive change in the policy text.",
+    "summary_generated": true,
     "caveat": "Captured before saidwhen trimmed pages down to the document itself, so navigation menus and cookie banners appear in this diff alongside the text that matters. Later changes are the document only."
   },
   "21d6a9b75763eb52e5706d1da6b8c447b49cb47e:meta/llama-use-policy": {
     "doc": "meta/llama-use-policy",
     "significance": "tooling",
-    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy \u2014 our extraction changed, the publisher's document did not.",
+    "why": "Archiving switched from whole pages to the document body. The lines that vanished are navigation menus, sidebars and a cookie banner that were never part of the policy — our extraction changed, the publisher's document did not.",
     "summary": null,
     "summary_generated": false
   },
