@@ -51,7 +51,37 @@
       "kind": "usage policy",
       "url": "https://openai.com/policies/usage-policies/",
       "status": "blocked",
-      "note": "Returns HTTP 403 to any non-browser client. Not evading it \u2014 bot protection is a refusal and gets treated as one. Left in the list so the gap stays visible rather than being quietly dropped."
+      "note": "Returns HTTP 403 to any non-browser client. Not evading it — bot protection is a refusal and gets treated as one. Left in the list so the gap stays visible rather than being quietly dropped."
+    },
+    {
+      "id": "google/synthid",
+      "org": "Google DeepMind",
+      "kind": "watermarking",
+      "url": "https://deepmind.google/science/synthid/",
+      "start_after": "A tool to watermark and identify content generated through AI",
+      "stop_before": "\nFollow us\n",
+      "must_contain": "SynthID embeds digital watermarks",
+      "note": "Google's public account of what it watermarks and where. The commitment itself, not a policy about it."
+    },
+    {
+      "id": "anthropic/responsible-scaling-policy",
+      "org": "Anthropic",
+      "kind": "safety policy",
+      "url": "https://www.anthropic.com/responsible-scaling-policy",
+      "start_after": "Anticipating and securing against emerging threats",
+      "stop_before": "\nProducts\n- Claude\n",
+      "must_contain": "Responsible Scaling",
+      "note": "Carries its own 'Last updated' line, so a revision is visible even before the wording is compared."
+    },
+    {
+      "id": "anthropic/transparency-hub",
+      "org": "Anthropic",
+      "kind": "transparency",
+      "url": "https://www.anthropic.com/transparency",
+      "start_after": "A look at Anthropic",
+      "stop_before": "\nProducts\n- Claude\n",
+      "must_contain": "Model Report",
+      "note": "Where a provenance or watermarking commitment would be written down if one were made."
     }
   ]
 }
