@@ -105,8 +105,8 @@
     "doc": "anthropic/model-deprecations",
     "significance": "notable",
     "why": "A restriction or obligation was removed or reworded — 12 lines containing binding language went away. Loosenings are rarely announced.",
-    "summary": null,
-    "summary_generated": false,
+    "summary": "Anthropic added a new \"Claude Fable 5.1\" model listing and clarified that its Python SDK (v1.0+) now removes deprecated temperature, top_p, and top_k parameters entirely, raising errors if used.",
+    "summary_generated": true,
     "caveat": "Most lines here only lost a leading icon glyph our extractor now strips — that part is ours. The real change is one added row: claude-fable-5-1."
   },
   "a83189daae8f166d7be8c97407b24a70d2cf4656:anthropic/usage-policy": {
@@ -120,8 +120,8 @@
     "doc": "meta/llama-use-policy",
     "significance": "routine",
     "why": "No binding language changed. Likely wording, structure or navigation.",
-    "summary": null,
-    "summary_generated": false,
+    "summary": "Added support for three models—Muse Spark 1.3, Muse Image, and Muse Voice Transcribe—removing the earlier Spark 1.1 and 1.2 entries.",
+    "summary_generated": true,
     "caveat": "Captured after a nineteen-day gap in which the archive recorded nothing, so this shows the net movement over that period rather than a single day's edit."
   },
   "a83189daae8f166d7be8c97407b24a70d2cf4656:mistral/terms-of-use": {
@@ -135,8 +135,8 @@
     "doc": "anthropic/transparency-hub",
     "significance": "notable",
     "why": "4 lines of binding language were added — this changes what someone is permitted or required to do.",
-    "summary": null,
-    "summary_generated": false,
+    "summary": "Anthropic added a full model card for the newly released Claude Opus 5, covering its capabilities, safety testing, red-teaming results, and alignment evaluations.",
+    "summary_generated": true,
     "caveat": "Captured after a nineteen-day gap in which the archive recorded nothing, so this shows the net movement over that period rather than a single day's edit."
   }
 }
