@@ -17,7 +17,7 @@
       "url": "https://www.anthropic.com/legal/aup",
       "must_contain": "Usage Policy",
       "start_after": "Our Usage Policy",
-      "stop_before": "Related content"
+      "stop_before": "\nProducts\n- Claude\n"
     },
     {
       "id": "google/gemini-prohibited-use",
@@ -42,8 +42,10 @@
       "org": "Mistral",
       "kind": "terms",
       "url": "https://mistral.ai/terms/#terms-of-use",
-      "note": "Legal centre is an index; needs verifying that the deep link resolves to the document itself.",
-      "must_contain": "Terms"
+      "note": "An index of Mistral's legal documents rather than a document itself. Weakest source here — it was redesigned in late August and its effective date left the page.",
+      "must_contain": "Terms of Service",
+      "start_after": "Get started For Consumers",
+      "stop_before": "\nCompany\n- About\n"
     },
     {
       "id": "openai/usage-policies",

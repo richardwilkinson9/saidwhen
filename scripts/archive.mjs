@@ -15,11 +15,30 @@
  *
  * Zero dependencies, zero credentials. Runs anywhere Node runs.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname } from 'node:path';
 
 const root = new URL('../', import.meta.url);
 const sources = JSON.parse(readFileSync(new URL('sources.json', root), 'utf8')).sources;
+
+/**
+ * What is currently held awaiting corroboration, as a hash per source.
+ *
+ * This lived in an untracked .pending/ directory for its first three weeks,
+ * which worked perfectly on a laptop and never once worked in CI: every run
+ * starts from a fresh checkout, so the held state was gone before the next
+ * fetch could agree with it. Every difference was held, forgotten, and held
+ * again the next day — the archive recorded nothing at all for nineteen days
+ * while reporting success every morning.
+ *
+ * So the held state is committed like everything else. A hash is enough: we
+ * only ever ask whether this capture matches the one held, and storing the
+ * hash keeps the file small and its diffs readable.
+ */
+const PENDING_FILE = new URL('data/pending.json', root);
+const pending = existsSync(PENDING_FILE) ? JSON.parse(readFileSync(PENDING_FILE, 'utf8')) : {};
+const digest = (s) => createHash('sha256').update(s).digest('hex');
 
 /** Roughly the size of the comment header, so shrink comparisons look at content. */
 const HEADER_ALLOWANCE = 260;
@@ -64,6 +83,12 @@ function toText(html) {
   // block, and preserving paragraph spacing turned that into a 108-line diff of
   // identical prose on the first day. Determinism beats prettiness: one block,
   // one line, whatever markup it arrived in.
+  // Private-use-area codepoints are icon-font glyphs — an anchor icon beside a
+  // heading, a chevron in a nav. They carry no text, are not whitespace, and
+  // come and go between renderings. Anthropic's headings each ended in one,
+  // which is the whole of a 39-line 'change' to its deprecation page.
+  s = s.replace(/[\uE000-\uF8FF]/g, '');
+
   s = s.replace(/[^\S\n]+/g, ' ');
   s = s.replace(/\s*\n\s*/g, '\n');
 
@@ -209,22 +234,19 @@ for (const src of sources) {
     // later fetch sees the same thing again. A change that is real persists; a
     // rendering wobble does not.
     if (prev !== null && prev !== body) {
-      const pendingPath = new URL(`.pending/${src.id}.txt`, root);
-      const pending = existsSync(pendingPath) ? readFileSync(pendingPath, 'utf8') : null;
-
-      if (pending !== body) {
-        mkdirSync(dirname(pendingPath.pathname), { recursive: true });
-        writeFileSync(pendingPath, body);
+      const hash = digest(body);
+      if (pending[src.id]?.hash !== hash) {
+        pending[src.id] = { hash, first_seen: new Date().toISOString().slice(0, 10) };
         held.push(`${src.id}: differs from the record — held for corroboration, will be recorded if the next fetch agrees`);
         continue;
       }
       // Seen twice running. It is real.
-      rmSync(pendingPath, { force: true });
+      delete pending[src.id];
     }
 
     if (prev === body) {
       // Whatever was pending disagreed with reality twice over; drop it.
-      rmSync(new URL(`.pending/${src.id}.txt`, root), { force: true });
+      delete pending[src.id];
       unchanged++;
     } else {
       mkdirSync(dirname(dest.pathname), { recursive: true });
@@ -238,6 +260,9 @@ for (const src of sources) {
 
   await sleep(1500); // One polite request at a time.
 }
+
+mkdirSync(new URL('data/', root).pathname, { recursive: true });
+writeFileSync(PENDING_FILE, JSON.stringify(pending, null, 2) + '\n');
 
 console.log(
   `\n${changed} changed, ${unchanged} unchanged, ${held.length} held for corroboration, ${failed.length} failed`

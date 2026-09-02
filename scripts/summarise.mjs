@@ -38,10 +38,21 @@ const git = (...a) =>
 const sources = JSON.parse(readFileSync(new URL('sources.json', root), 'utf8')).sources;
 const cache = existsSync(CACHE) ? JSON.parse(readFileSync(CACHE, 'utf8')) : {};
 
-const TOOLING = (() => {
+const TOOLING_FILE = (() => {
   const f = new URL('data/tooling-commits.json', root);
-  return existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')).commits ?? {} : {};
+  return existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : {};
 })();
+const TOOLING = TOOLING_FILE.commits ?? {};
+const CAVEATS = TOOLING_FILE.caveats ?? {};
+
+/**
+ * A single fetch can carry both our change and theirs: the run that stripped
+ * icon glyphs also caught Anthropic adding a model to its deprecation table.
+ * Labelling the whole commit 'tooling' would have buried that. So a label can
+ * name one document — `<commit>:<document>` — and only that document is called
+ * ours; the rest are summarised normally.
+ */
+const toolingFor = (sha, doc) => TOOLING[`${sha}:${doc}`] ?? TOOLING[sha] ?? null;
 
 /**
  * Before this commit, captures were whole pages — nav menus, sidebars and
@@ -211,11 +222,12 @@ for (const src of sources) {
 
     // Our own reformatting is not a change to what the publisher said, and
     // must never be summarised as though it were.
-    if (TOOLING[sha]) {
+    const tool = toolingFor(sha, src.id);
+    if (tool) {
       cache[key] = {
         doc: src.id,
         significance: 'tooling',
-        why: TOOLING[sha],
+        why: tool,
         summary: null,
         summary_generated: false,
       };
@@ -233,7 +245,7 @@ for (const src of sources) {
       why: sig.why,
       summary: summary ?? null,
       summary_generated: summary ? true : false,
-      caveat: isPageEra(sha) ? PAGE_ERA_CAVEAT : undefined,
+      caveat: CAVEATS[`${sha}:${src.id}`] ?? (isPageEra(sha) ? PAGE_ERA_CAVEAT : undefined),
     };
     written++;
     console.log(`${sig.level.padEnd(11)} ${src.id}  ${summary ? '' : '(no summary)'}`);

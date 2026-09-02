@@ -14,9 +14,10 @@ Overview
 API Login
 Models
 Muse
-Muse Spark 1.2
-Muse Spark 1.1
+Muse Spark 1.3
 Muse Glimmer
+Muse Image
+Muse Voice Transcribe
 Llama
 Llama 4
 Llama 3
