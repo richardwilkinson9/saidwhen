@@ -100,5 +100,43 @@
     "why": "Extraction rewritten to collapse whitespace deterministically, after the same page served twice produced a 108-line diff of identical prose.",
     "summary": null,
     "summary_generated": false
+  },
+  "a83189daae8f166d7be8c97407b24a70d2cf4656:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 12 lines containing binding language went away. Loosenings are rarely announced.",
+    "summary": null,
+    "summary_generated": false,
+    "caveat": "Most lines here only lost a leading icon glyph our extractor now strips — that part is ours. The real change is one added row: claude-fable-5-1."
+  },
+  "a83189daae8f166d7be8c97407b24a70d2cf4656:anthropic/usage-policy": {
+    "doc": "anthropic/usage-policy",
+    "significance": "tooling",
+    "why": "Our capture stopped at a marker that does not appear on the page, so the site footer had been inside it. The 93 lines removed here are that footer. Anthropic did not change its usage policy.",
+    "summary": null,
+    "summary_generated": false
+  },
+  "a83189daae8f166d7be8c97407b24a70d2cf4656:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": null,
+    "summary_generated": false,
+    "caveat": "Captured after a nineteen-day gap in which the archive recorded nothing, so this shows the net movement over that period rather than a single day's edit."
+  },
+  "a83189daae8f166d7be8c97407b24a70d2cf4656:mistral/terms-of-use": {
+    "doc": "mistral/terms-of-use",
+    "significance": "tooling",
+    "why": "Mistral redesigned its Legal Center in late August and our capture had no document boundaries at all. This diff is mostly us finally setting them. Note the effective date left the page in the redesign — that part is theirs, not ours.",
+    "summary": null,
+    "summary_generated": false
+  },
+  "a83189daae8f166d7be8c97407b24a70d2cf4656:anthropic/transparency-hub": {
+    "doc": "anthropic/transparency-hub",
+    "significance": "notable",
+    "why": "4 lines of binding language were added — this changes what someone is permitted or required to do.",
+    "summary": null,
+    "summary_generated": false,
+    "caveat": "Captured after a nineteen-day gap in which the archive recorded nothing, so this shows the net movement over that period rather than a single day's edit."
   }
 }
