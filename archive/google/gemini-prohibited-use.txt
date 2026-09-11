@@ -6,17 +6,6 @@
 Generative AI Prohibited Use Policy Skip to main content
 Privacy & Terms Privacy & Terms
 Sign in
-- Overview
-- Privacy Policy
-- Terms of Service
-- Technologies
-- FAQ
-Privacy & Terms
-- Overview
-- Privacy Policy
-- Terms of Service
-- Technologies
-- FAQ
 Privacy & Terms Privacy & Terms
 Privacy & Terms
 - Overview
@@ -25,6 +14,17 @@ Privacy & Terms
 - Technologies
 - FAQ
 - Google Account
+- Overview
+- Privacy Policy
+- Terms of Service
+- Technologies
+- FAQ
+Privacy & Terms
+- Overview
+- Privacy Policy
+- Terms of Service
+- Technologies
+- FAQ
 Generative AI Prohibited Use Policy
 Last Modified: December 17, 2024
 Generative AI models can help you explore, learn, and create. We expect you to engage with them in a responsible, legal, and safe manner. The following restrictions apply to your interactions with generative AI in the Google products and services that refer to this policy.
