@@ -138,5 +138,12 @@
     "summary": "Anthropic added a full model card for the newly released Claude Opus 5, covering its capabilities, safety testing, red-teaming results, and alignment evaluations.",
     "summary_generated": true,
     "caveat": "Captured after a nineteen-day gap in which the archive recorded nothing, so this shows the net movement over that period rather than a single day's edit."
+  },
+  "5f716f050ba07672c55ff69ad8f0a49e137e8328:google/gemini-prohibited-use": {
+    "doc": "google/gemini-prohibited-use",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Only site navigation/header text changed (a \"Google Account\" link appeared then disappeared); no policy wording changed.",
+    "summary_generated": true
   }
 }
