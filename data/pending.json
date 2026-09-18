@@ -1,6 +1,10 @@
 {
-  "meta/llama-use-policy": {
-    "hash": "2632878fc160935354c71c3105cfb2353d38a6f435986e4a117dfb26ea57001e",
-    "first_seen": "2026-09-17"
+  "anthropic/responsible-scaling-policy": {
+    "hash": "3a1c45379804431b981fe9b9162ce9f39c96c2ac3ebaa95f3510dc96cb925ca0",
+    "first_seen": "2026-09-18"
+  },
+  "anthropic/transparency-hub": {
+    "hash": "cd20e4d848787e3cf132fdea8287f89252c92a2fa679ba850aa6aafef6bd64b3",
+    "first_seen": "2026-09-18"
   }
 }
