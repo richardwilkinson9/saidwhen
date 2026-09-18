@@ -145,5 +145,12 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Only site navigation/header text changed (a \"Google Account\" link appeared then disappeared); no policy wording changed.",
     "summary_generated": true
+  },
+  "96f1409b7b3bd590aae333ed90cf1e9f930f72be:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "substantial",
+    "why": "58 lines changed — a large revision, though no obligation wording moved.",
+    "summary": "Added Muse Spark 1.3 and a new \"Muse Image\" model to the navigation menu; no policy text changed.",
+    "summary_generated": true
   }
 }
