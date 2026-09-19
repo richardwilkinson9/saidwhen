@@ -152,5 +152,19 @@
     "why": "58 lines changed — a large revision, though no obligation wording moved.",
     "summary": "Added Muse Spark 1.3 and a new \"Muse Image\" model to the navigation menu; no policy text changed.",
     "summary_generated": true
+  },
+  "dbfd9550426ab5e4d82c2c16292adcd07accf9e7:anthropic/responsible-scaling-policy": {
+    "doc": "anthropic/responsible-scaling-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "The \"Related\" links section was removed.",
+    "summary_generated": true
+  },
+  "dbfd9550426ab5e4d82c2c16292adcd07accf9e7:anthropic/transparency-hub": {
+    "doc": "anthropic/transparency-hub",
+    "significance": "notable",
+    "why": "3 lines of binding language were added — this changes what someone is permitted or required to do.",
+    "summary": "Anthropic added new model versions (Claude Fable 5.1 and Claude Mythos 5.1) with a full transparency summary, including safety, alignment, and capability evaluation details.",
+    "summary_generated": true
   }
 }
