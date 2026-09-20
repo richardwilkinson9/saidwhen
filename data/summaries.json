@@ -166,5 +166,12 @@
     "why": "3 lines of binding language were added — this changes what someone is permitted or required to do.",
     "summary": "Anthropic added new model versions (Claude Fable 5.1 and Claude Mythos 5.1) with a full transparency summary, including safety, alignment, and capability evaluation details.",
     "summary_generated": true
+  },
+  "c36bd2113bc834231e3ac663246caafd5713ca2d:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "1 line of binding language were added — this changes what someone is permitted or required to do.",
+    "summary": "Anthropic added three new Claude \"Mythos\" models to its deprecation schedule, one already deprecated and two set for retirement no earlier than 2027.",
+    "summary_generated": true
   }
 }
