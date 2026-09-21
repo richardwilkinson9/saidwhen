@@ -173,5 +173,12 @@
     "why": "1 line of binding language were added — this changes what someone is permitted or required to do.",
     "summary": "Anthropic added three new Claude \"Mythos\" models to its deprecation schedule, one already deprecated and two set for retirement no earlier than 2027.",
     "summary_generated": true
+  },
+  "32cacc81f74c303a76e5db8f91afa92e42afa697:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "substantial",
+    "why": "69 lines changed — a large revision, though no obligation wording moved.",
+    "summary": "The page rebrands from \"Llama\" products/site sections to \"Meta Model API\" and \"Muse\" branding, adds Segment Anything (SAM) and SAM 3.1, drops \"Safety,\" \"Llama Protections,\" and \"Llama Defenders Program\" sections, and updates model version numbers.",
+    "summary_generated": true
   }
 }
