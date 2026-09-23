@@ -1,6 +1,6 @@
 {
-  "meta/llama-use-policy": {
-    "hash": "d394b04d7ada393a1605034ef0a3201ec48c2aa0317175532e5e3a3a715a75fc",
-    "first_seen": "2026-09-22"
+  "anthropic/model-deprecations": {
+    "hash": "82f5e2e611bee2c80f959d48d07e79d9c118a2a8a987a23a500bb57ee3742572",
+    "first_seen": "2026-09-23"
   }
 }
