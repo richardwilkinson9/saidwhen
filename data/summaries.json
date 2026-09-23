@@ -180,5 +180,12 @@
     "why": "69 lines changed — a large revision, though no obligation wording moved.",
     "summary": "The page rebrands from \"Llama\" products/site sections to \"Meta Model API\" and \"Muse\" branding, adds Segment Anything (SAM) and SAM 3.1, drops \"Safety,\" \"Llama Protections,\" and \"Llama Defenders Program\" sections, and updates model version numbers.",
     "summary_generated": true
+  },
+  "d96739587f5913a320218f098a9ad0a1798791f7:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "substantial",
+    "why": "31 lines changed — a large revision, though no obligation wording moved.",
+    "summary": "The change is purely navigation and site structure (menu items, product listings), with no wording change to the usage policy itself.",
+    "summary_generated": true
   }
 }
