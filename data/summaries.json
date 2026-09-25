@@ -187,5 +187,12 @@
     "why": "31 lines changed — a large revision, though no obligation wording moved.",
     "summary": "The change is purely navigation and site structure (menu items, product listings), with no wording change to the usage policy itself.",
     "summary_generated": true
+  },
+  "be65ad4129acab279065f1a494811e7a44953a18:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "The page removed a deprecation notice for Claude Mythos Preview and added an entry listing claude-opus-5-5 as Active, with deprecation not expected before September 22, 2027.",
+    "summary_generated": true
   }
 }
