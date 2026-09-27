@@ -10,7 +10,6 @@ For Commercial Customers
 - Commercial Terms of Service
 - Additional Product Terms
 - Partner-served deployment terms
-- Additional Terms for Use of Mistral AI Products on Customer Infrastructure
 - Data Processing Addendum
 For Partners
 - Connectors terms
