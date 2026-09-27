@@ -194,5 +194,12 @@
     "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
     "summary": "The page removed a deprecation notice for Claude Mythos Preview and added an entry listing claude-opus-5-5 as Active, with deprecation not expected before September 22, 2027.",
     "summary_generated": true
+  },
+  "c4d292410dedd74cd12b268c1803c12395d838ff:mistral/terms-of-use": {
+    "doc": "mistral/terms-of-use",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Removed the section on additional terms for using Mistral AI products on customer infrastructure.",
+    "summary_generated": true
   }
 }
