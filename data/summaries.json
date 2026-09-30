@@ -201,5 +201,12 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Removed the section on additional terms for using Mistral AI products on customer infrastructure.",
     "summary_generated": true
+  },
+  "031c64fe67d4c60c7c8dd3e121a3b519f6ec4835:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Anthropic's deprecations page added a new entry listing claude-sonnet-5-5 as active, with no retirement date set and a stated commitment not to retire it sooner than September 28, 2027.",
+    "summary_generated": true
   }
 }
