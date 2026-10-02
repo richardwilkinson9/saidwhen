@@ -208,5 +208,19 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Anthropic's deprecations page added a new entry listing claude-sonnet-5-5 as active, with no retirement date set and a stated commitment not to retire it sooner than September 28, 2027.",
     "summary_generated": true
+  },
+  "a390f82f25780f5cb21d11c8e8781bde91aa11b7:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "3 lines of binding language were added — this changes what someone is permitted or required to do.",
+    "summary": "Anthropic changed Claude Sonnet 4.5's status from active to deprecated, announcing on September 30, 2026 that it will be retired on November 30, 2026, with Claude Sonnet 5.5 as the recommended replacement.",
+    "summary_generated": true
+  },
+  "a390f82f25780f5cb21d11c8e8781bde91aa11b7:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "substantial",
+    "why": "67 lines changed — a large revision, though no obligation wording moved.",
+    "summary": "Meta's Llama 3 usage policy page now shows a redesigned site menu and footer, adding links to newer Muse models, products, developer documentation, and a hackathon banner; no policy wording changed.",
+    "summary_generated": true
   }
 }
