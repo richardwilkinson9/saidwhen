@@ -1,1 +1,10 @@
-{}
+{
+  "meta/llama-use-policy": {
+    "hash": "d394b04d7ada393a1605034ef0a3201ec48c2aa0317175532e5e3a3a715a75fc",
+    "first_seen": "2026-10-03"
+  },
+  "anthropic/transparency-hub": {
+    "hash": "2470aecb614a0ac8fda18811f90cf4f79cb9dd1a4e61487968700327750d0a5e",
+    "first_seen": "2026-10-03"
+  }
+}
