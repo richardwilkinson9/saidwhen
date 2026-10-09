@@ -236,5 +236,26 @@
     "why": "3 lines of binding language were added — this changes what someone is permitted or required to do.",
     "summary": "Anthropic added new transparency pages for two models, Claude Sonnet 5.5 and Claude Opus 5.5, including descriptions, September 2026 release dates, and safety results, and updated the page date to October 2, 2026.",
     "summary_generated": true
+  },
+  "7246494c2c35f4c659f3b0a61b8160117e38631f:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "A new row was added listing the model claude-haiku-5-5 as Active, with no retirement date given and a earliest-possible retirement of October 7, 2027.",
+    "summary_generated": true
+  },
+  "7246494c2c35f4c659f3b0a61b8160117e38631f:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "substantial",
+    "why": "37 lines changed — a large revision, though no obligation wording moved.",
+    "summary": "Meta's Llama 3 usage policy page gained a block of new navigation menu text, including a hackathon banner and links to Meta's Muse models, API, documentation, community and sales pages; no policy wording changed.",
+    "summary_generated": true
+  },
+  "7246494c2c35f4c659f3b0a61b8160117e38631f:google/synthid": {
+    "doc": "google/synthid",
+    "significance": "substantial",
+    "why": "26 lines changed — a large revision, though no obligation wording moved.",
+    "summary": "Google's SynthID page now says \"Google SynthID\", lets Gemini, Search and Chrome check for watermarks, and opens the SynthID Detector portal to everyone, including content from partners OpenAI, NVIDIA, Kakao and soon Apple.",
+    "summary_generated": true
   }
 }
