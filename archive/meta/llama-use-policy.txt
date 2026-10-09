@@ -4,6 +4,43 @@
 # ---
 
 Acceptable Use Policy
+Meta Global AI Developer Hackathon. $1M in prizes. Get notified
+Documentation Products
+Muse Code
+Overview
+Meta Model API
+Overview
+API Login
+Meta Connectors
+Meta AI Connectors
+Muse Connectors ↗
+Close popover
+Models
+Muse
+Muse Spark 1.3
+Muse Glimmer
+Muse Image
+Muse Voice Transcribe
+Segment Anything (SAM)
+SAM 3.1
+Close popover
+Resources
+Documentation
+Model API docs ↗
+Learn
+Cookbooks ↗
+Videos
+Blog
+Close popover
+Community
+Github
+Meta Models ↗
+Llama ↗
+Hugging Face
+Meta Models ↗
+Close popover
+Contact Sales
+Login
 Llama 3
 Acceptable Use Policy
 Meta is committed to promoting safe and fair use of its tools and features, including Meta Llama 3. If you access or use Meta Llama 3, you agree to this Acceptable Use Policy (“ Policy ”). The most recent copy of this policy can be found at https://developer.meta.com/ai/llama3/use-policy .
