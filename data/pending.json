@@ -1,6 +1,6 @@
 {
-  "anthropic/usage-policy": {
-    "hash": "058c37fefbde3c07982e9964bdc3a13225a75ae61650869aabb384868df37c29",
-    "first_seen": "2026-10-09"
+  "anthropic/model-deprecations": {
+    "hash": "26c345a8ddd73a37b48ab875092002cfdff698fd0087ce9e3861992b668ad9e5",
+    "first_seen": "2026-10-10"
   }
 }
