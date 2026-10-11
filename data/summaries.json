@@ -264,5 +264,12 @@
     "why": "A restriction or obligation was removed or reworded — 9 lines containing binding language went away. Loosenings are rarely announced.",
     "summary": "Anthropic rewrote and reorganized its usage policy, adding detail on enforcement, a verification program for adjusted access, a security-research carve-out, and rewording the weapons, hacking, privacy, child-safety and self-harm rules.",
     "summary_generated": true
+  },
+  "1bb46916a8003251e5ab7be50b1c1c4615e727b6:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Anthropic updated its deprecations table so the recommended replacement for four retired Claude Sonnet models changed from claude-sonnet-4-6 to claude-sonnet-5-5, and reworded a note on sampling settings now covering \"Claude 4.7 and later models.\"",
+    "summary_generated": true
   }
 }
