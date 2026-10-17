@@ -278,5 +278,12 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Meta's hackathon banner changed from \"Get notified\" to \"Apply Now\", and a new \"Muse Wonder\" item appeared in the navigation menu, alongside invisible-character formatting tweaks.",
     "summary_generated": true
+  },
+  "b01193ea759cf76229f975728b1bd4df06e52fa9:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Meta added the text \"Muse Spark Open\" to the policy page, with no other changes shown, and the diff doesn't say whether it's a name, heading or link.",
+    "summary_generated": true
   }
 }
