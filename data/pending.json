@@ -1,1 +1,6 @@
-{}
+{
+  "anthropic/transparency-hub": {
+    "hash": "419689ccf1fb4d1063a52aa0bc63aebd68afed6e246353205682caa734e76192",
+    "first_seen": "2026-10-20"
+  }
+}
