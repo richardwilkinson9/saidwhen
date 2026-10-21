@@ -1,6 +1,14 @@
 {
   "anthropic/transparency-hub": {
-    "hash": "419689ccf1fb4d1063a52aa0bc63aebd68afed6e246353205682caa734e76192",
-    "first_seen": "2026-10-20"
+    "hash": "30dcab4dfebd3bdef9f531faf525ba4b228a2d3ddf4be5d55e3b113173b0968d",
+    "first_seen": "2026-10-21"
+  },
+  "anthropic/usage-policy": {
+    "hash": "4665b9cf2621bf78992df51b25b09e7bf5126edb8838c62ed68e863351abdc5b",
+    "first_seen": "2026-10-21"
+  },
+  "anthropic/responsible-scaling-policy": {
+    "hash": "2cea2072b7835651e2fbe01afdb762f9936349d1c1a961eab2c94369bca926ab",
+    "first_seen": "2026-10-21"
   }
 }
