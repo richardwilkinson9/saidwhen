@@ -285,5 +285,19 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Meta added the text \"Muse Spark Open\" to the policy page, with no other changes shown, and the diff doesn't say whether it's a name, heading or link.",
     "summary_generated": true
+  },
+  "61378936f156da0ce750e64eb1824cf445c9f0d0:anthropic/responsible-scaling-policy": {
+    "doc": "anthropic/responsible-scaling-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "The archived page changed from a note pointing readers to a PDF to a full web page with site navigation menus, Anthropic's mission statement, login links and a 2026 copyright footer.",
+    "summary_generated": true
+  },
+  "61378936f156da0ce750e64eb1824cf445c9f0d0:anthropic/transparency-hub": {
+    "doc": "anthropic/transparency-hub",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 25 lines containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Anthropic added a new Claude Haiku 5.5 section (released October 2026) with its description, training data and safety-test results, and reorganized the Sonnet 5.5 entries and headings.",
+    "summary_generated": true
   }
 }
