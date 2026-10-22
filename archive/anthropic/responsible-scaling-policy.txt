@@ -12,7 +12,6 @@ Current and Prior Versions
 Read the current version of the RSP
 See the pdf
 RSP Noncompliance Reporting and Anti-Retaliation Policy
-See the PDF
 - Version 3.4 and redline (effective July 8, 2026)
 - Version 3.3 and redline (effective May 26, 2026)
 - Version 3.2 and redline (effective April 29, 2026)
@@ -109,3 +108,18 @@ We have learned a lot in our first year with the previous RSP in effect, and are
 - Our evaluations in one domain were not explicitly designed to establish the 6x scaling buffer mentioned in the previous policy. Since our current techniques aren’t capable of giving confident buffer predictions, we instead relied on empirical observations and rough predictions. We believe this presents minimal risk at present, where capability improvements happen more smoothly with scale, but in the future, quantitative predictions may become necessary. We have updated the new policy to note this situation.
 In all cases, we found these instances posed minimal risk to the safety of our models. From our review, we learned two valuable lessons to incorporate into our updated framework: we needed to incorporate more flexibility into our policies, and we needed to improve our process for tracking compliance with the RSP.
 Since we first released the RSP a year ago, our goal has been to offer an example of a framework that others might draw inspiration from when crafting their own AI risk governance policies. We hope that proactively sharing our experiences implementing our own policy will help other companies in implementing their own risk management frameworks and contribute to the establishment of best practices across the AI ecosystem.
+Research
+Policy
+Commitments
+Company
+Products
+Models
+Solutions
+Help and security
+Terms and policies
+Our mission
+AI research and products that put safety at the frontier. AI will have a vast impact on the world. Anthropic is a public benefit corporation dedicated to securing its benefits and mitigating its risks.
+Log in
+- Claude.ai
+- Claude console
+© 2026 Anthropic PBC

@@ -1,14 +1,14 @@
 {
-  "anthropic/transparency-hub": {
-    "hash": "30dcab4dfebd3bdef9f531faf525ba4b228a2d3ddf4be5d55e3b113173b0968d",
-    "first_seen": "2026-10-21"
-  },
   "anthropic/usage-policy": {
-    "hash": "4665b9cf2621bf78992df51b25b09e7bf5126edb8838c62ed68e863351abdc5b",
-    "first_seen": "2026-10-21"
+    "hash": "ec005b0a4c8f730823dbc90737f8b88b9bdfc8946d42edd1bff72c6760fcbf95",
+    "first_seen": "2026-10-22"
   },
-  "anthropic/responsible-scaling-policy": {
-    "hash": "2cea2072b7835651e2fbe01afdb762f9936349d1c1a961eab2c94369bca926ab",
-    "first_seen": "2026-10-21"
+  "anthropic/model-deprecations": {
+    "hash": "d54ee17e42420a8257da3bed3c70ba442b2f7f0dbc6f12f2ed1eaf6d2ffa6405",
+    "first_seen": "2026-10-22"
+  },
+  "google/gemini-prohibited-use": {
+    "hash": "a054834bfbb387157af3c6be4542f7ee92c9d8aaa2093765014ed3e69d91b8de",
+    "first_seen": "2026-10-22"
   }
 }
