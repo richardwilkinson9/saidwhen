@@ -1,14 +1,6 @@
 {
-  "anthropic/usage-policy": {
-    "hash": "ec005b0a4c8f730823dbc90737f8b88b9bdfc8946d42edd1bff72c6760fcbf95",
-    "first_seen": "2026-10-22"
-  },
   "anthropic/model-deprecations": {
-    "hash": "d54ee17e42420a8257da3bed3c70ba442b2f7f0dbc6f12f2ed1eaf6d2ffa6405",
-    "first_seen": "2026-10-22"
-  },
-  "google/gemini-prohibited-use": {
-    "hash": "a054834bfbb387157af3c6be4542f7ee92c9d8aaa2093765014ed3e69d91b8de",
-    "first_seen": "2026-10-22"
+    "hash": "6234d6cc5028bac151954e72ca0f055f902255bc8e5e7df663db5bd5867c10b5",
+    "first_seen": "2026-10-23"
   }
 }

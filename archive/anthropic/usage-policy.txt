@@ -15,7 +15,7 @@ Anthropic’s Safeguards Team implements detection and monitoring to enforce our
 Our products also include real-time safeguards that may block or limit certain outputs, but encountering a block does not by itself indicate a violation of the Usage Policy. For certain dual-use or high-risk use cases covered by real-time safeguards in select domains, we may offer programs where you can apply to be granted access to our products and services with adjusted safeguards, such as our Cyber Verification Program and Life Sciences Verification Program , subject to program-specific eligibility criteria.
 If you believe that our model outputs are potentially inaccurate, biased, or harmful, please notify us at usersafety@anthropic.com, or report it directly in our product through the “report issues” thumbs down button or similar feedback features (where available). You can read more about our Safeguards practices and recommendations in our Safeguards Support Center .
 This Usage Policy is calibrated to strike an optimal balance between enabling beneficial uses and mitigating potential harms. Anthropic may enter into contracts with certain governmental customers that tailor use restrictions to that customer’s public mission and legal authorities if, in Anthropic’s judgment, the contractual use restrictions and applicable safeguards are adequate to mitigate the potential harms addressed by this Usage Policy.
-Universal Usage Standards High-risk Use Case Requirements Additional Use Case Guidelines
+Universal Usage Standards
 Do Not Violate Applicable Laws or Engage in Illegal Activity
 This includes using our products or services to:
 - Illegally produce, acquire, sell, or distribute controlled or regulated substances
@@ -138,6 +138,7 @@ This includes using our products or services to:
 - Generate content related to sexual fetishes or fantasies
 - Facilitate, promote, or depict incest or bestiality
 - Engage in erotic chats
+High-risk Use Case Requirements
 Certain uses of our products and services can impact an individual’s health, legal rights, finances, livelihoods, or access to housing, education, or essential services. When our products are used for these high-risk use cases, we require that a qualified person remain accountable for what is delivered or decided, and that the impacted individual knows AI was involved in the advice or decision. These requirements apply to anyone who uses our products to make a High-risk AI Recommendation or control equipment capable of High-risk Physical Actions.
 These requirements for high-risk use cases are meant to protect individuals. However, they do not replace local legal requirements and restrictions. Users should always default to following local laws if those laws conflict with or add additional requirements to the requirements listed below. Our products and services may not be suitable for all use cases.
 Requirements
@@ -191,6 +192,7 @@ Where permitted by law, human-in-the-loop review is not required before acting o
 - Granting eligibility for a healthcare service or program.
 - Granting or continuing a public benefit or service.
 Additional legal obligations such as disclosure may still apply. A partial approval, reduced amount, or approval with conditions is not considered “wholly favorable.”
+Additional Use Case Guidelines
 The below use cases — regardless of whether they involve High-risk AI Recommendations or Physical Actions — must comply with the additional guidelines provided.
 - All consumer-facing chatbots or AI agents that communicate directly with external users must disclose to users that they are interacting with AI rather than a human. This disclosure must be provided at a minimum at the beginning of each chat session or in the product interface. The disclosure does not need to identify Anthropic, Claude, or the model used.
 - Products serving minors, including organizations providing minors with the ability to directly interact with products that incorporate our API(s), must comply with the additional guidelines outlined in our Support article and all applicable laws.
@@ -199,3 +201,18 @@ The below use cases — regardless of whether they involve High-risk AI Recommen
 We also provide additional informational resources in our Safeguards Support Center , including:
 - Our Child Safety Guidance for Developers for detailed guidance on identifying and mitigating child safety risks.
 - Additional information about our mental health safeguards on Claude.ai.
+Research
+Policy
+Commitments
+Company
+Products
+Models
+Solutions
+Help and security
+Terms and policies
+Our mission
+AI research and products that put safety at the frontier. AI will have a vast impact on the world. Anthropic is a public benefit corporation dedicated to securing its benefits and mitigating its risks.
+Log in
+- Claude.ai
+- Claude console
+© 2026 Anthropic PBC
