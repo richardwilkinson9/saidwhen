@@ -304,14 +304,21 @@
     "doc": "anthropic/usage-policy",
     "significance": "routine",
     "why": "No binding language changed. Likely wording, structure or navigation.",
-    "summary": null,
-    "summary_generated": false
+    "summary": "The page's archived text now includes site navigation, header and footer content (menus, the mission statement, login links and a 2026 copyright line), while the policy's own section headings are unchanged apart from being split onto separate lines.",
+    "summary_generated": true
   },
   "bdcaeeb59c5330470db83eba8d97daa03bd2d5d7:google/gemini-prohibited-use": {
     "doc": "google/gemini-prohibited-use",
     "significance": "routine",
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Unclear from the diff.",
+    "summary_generated": true
+  },
+  "22534247d6fae0c1691f666b7d588d9399a9fdf6:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 13 lines containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Anthropic's page now lists Google Cloud as partly Anthropic-managed, and says the temperature, top_p and top_k settings are removed in API version 2026-10-21, with the rest being minor wording edits.",
     "summary_generated": true
   }
 }
