@@ -852,7 +852,7 @@ Solutions
 Help and security
 Terms and policies
 Our mission
-AI research and products that put safety at the frontier. AI will have a vast impact on the world. Anthropic is a public benefit corporation dedicated to securing its benefits and mitigating its risks.
+Anthropic is a Public Benefit Corporation. Our mission is to ensure the world safely makes the transition through transformative AI.
 Log in
 - Claude.ai
 - Claude console
