@@ -320,5 +320,33 @@
     "why": "A restriction or obligation was removed or reworded — 13 lines containing binding language went away. Loosenings are rarely announced.",
     "summary": "Anthropic's page now lists Google Cloud as partly Anthropic-managed, and says the temperature, top_p and top_k settings are removed in API version 2026-10-21, with the rest being minor wording edits.",
     "summary_generated": true
+  },
+  "46cbc05e107855cb8f1789cb1c7aa3464ec1661f:anthropic/usage-policy": {
+    "doc": "anthropic/usage-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "The page's introductory description of Anthropic was reworded: the earlier line about AI research and products putting safety at the frontier became a shorter statement of its public benefit corporation status and mission to help the world safely transition through transformative AI.",
+    "summary_generated": true
+  },
+  "46cbc05e107855cb8f1789cb1c7aa3464ec1661f:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "A banner advertising the Meta Global AI Developer Hackathon, with $1 million in prizes and an \"Apply Now\" link, was removed from the page.",
+    "summary_generated": true
+  },
+  "46cbc05e107855cb8f1789cb1c7aa3464ec1661f:anthropic/responsible-scaling-policy": {
+    "doc": "anthropic/responsible-scaling-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "The page's opening description of Anthropic was reworded from \"AI research and products that put safety at the frontier\" to a shorter statement that its mission is ensuring the world safely transitions through transformative AI.",
+    "summary_generated": true
+  },
+  "46cbc05e107855cb8f1789cb1c7aa3464ec1661f:anthropic/transparency-hub": {
+    "doc": "anthropic/transparency-hub",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Anthropic replaced its page's description, dropping the line about AI research and products putting safety at the frontier, with a shorter statement that it is a Public Benefit Corporation whose mission is a safe transition through transformative AI.",
+    "summary_generated": true
   }
 }
