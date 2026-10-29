@@ -348,5 +348,12 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Anthropic replaced its page's description, dropping the line about AI research and products putting safety at the frontier, with a shorter statement that it is a Public Benefit Corporation whose mission is a safe transition through transformative AI.",
     "summary_generated": true
+  },
+  "11c2a734aafb735deb02d4006c1826d7cc19e748:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 2 lines containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Two sentences on the page had their straight apostrophes swapped for curly ones; the wording, dates and model information are otherwise unchanged.",
+    "summary_generated": true
   }
 }
