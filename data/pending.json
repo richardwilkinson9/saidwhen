@@ -1,1 +1,6 @@
-{}
+{
+  "anthropic/model-deprecations": {
+    "hash": "135c3fe80d7251d2697f9eefcb8d47903acfa72e851f2db6e56219b1f2c596c4",
+    "first_seen": "2026-11-04"
+  }
+}
