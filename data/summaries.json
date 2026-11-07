@@ -362,5 +362,26 @@
     "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
     "summary": "The page's note about which platforms follow Anthropic's retirement dates was reworded: the two partner-operated platforms are now listed in a different order, with Google Cloud (Google managed) before Amazon Bedrock.",
     "summary_generated": true
+  },
+  "b0aa4826e6ca7778fc72c536ff053ff92c0c45a0:anthropic/usage-policy": {
+    "doc": "anthropic/usage-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Anthropic reworded its mission statement, replacing \"ensure the world safely makes the transition through transformative AI\" with \"the responsible development and maintenance of advanced AI for the long-term benefit of humanity.\"",
+    "summary_generated": true
+  },
+  "b0aa4826e6ca7778fc72c536ff053ff92c0c45a0:anthropic/responsible-scaling-policy": {
+    "doc": "anthropic/responsible-scaling-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Anthropic's stated mission changed from ensuring the world safely navigates the transition through transformative AI to the responsible development and maintenance of advanced AI for humanity's long-term benefit.",
+    "summary_generated": true
+  },
+  "b0aa4826e6ca7778fc72c536ff053ff92c0c45a0:anthropic/transparency-hub": {
+    "doc": "anthropic/transparency-hub",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Anthropic reworded its mission statement from \"ensure the world safely makes the transition through transformative AI\" to \"the responsible development and maintenance of advanced AI for the long-term benefit of humanity,\" and shortened a \"Chapter 01\" heading label.",
+    "summary_generated": true
   }
 }
