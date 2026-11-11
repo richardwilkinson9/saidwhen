@@ -383,5 +383,19 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Anthropic reworded its mission statement from \"ensure the world safely makes the transition through transformative AI\" to \"the responsible development and maintenance of advanced AI for the long-term benefit of humanity,\" and shortened a \"Chapter 01\" heading label.",
     "summary_generated": true
+  },
+  "88f0f1bb24ee1ac538c5b9bc34acf521a09149cb:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Two new models, claude-fable-5-2 and claude-mythos-5-2, were added to Anthropic's deprecations table as Active, with no retirement date set and no earlier than November 9, 2027.",
+    "summary_generated": true
+  },
+  "88f0f1bb24ee1ac538c5b9bc34acf521a09149cb:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "routine",
+    "why": "No binding language changed. Likely wording, structure or navigation.",
+    "summary": "Meta's Llama 3 usage policy page gained a new line reading \"Muse Ember,\" with no surrounding context in the diff to explain what it refers to.",
+    "summary_generated": true
   }
 }
