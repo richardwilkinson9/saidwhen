@@ -1,1 +1,10 @@
-{}
+{
+  "anthropic/model-deprecations": {
+    "hash": "10ff7d477e8a480d3ffb33d6fbef6477083cfbad0c46ce70f5a5c6c720e7f363",
+    "first_seen": "2026-11-12"
+  },
+  "meta/llama-use-policy": {
+    "hash": "0506b3964f7f144c292572ff5b406bc8bcd11bee9709547561d7c6c5e7fabbb8",
+    "first_seen": "2026-11-12"
+  }
+}
