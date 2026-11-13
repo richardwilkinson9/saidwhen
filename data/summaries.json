@@ -397,5 +397,19 @@
     "why": "No binding language changed. Likely wording, structure or navigation.",
     "summary": "Meta's Llama 3 usage policy page gained a new line reading \"Muse Ember,\" with no surrounding context in the diff to explain what it refers to.",
     "summary_generated": true
+  },
+  "572f6db59b04f4425a0140f1799cb047aeb03b29:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "The page's list of partner-operated platforms was reworded: the Amazon Bedrock table references changed from \"Amazon Bedrock\" and \"Amazon Bedrock (Opus 4.6 and earlier)\" to \"Amazon Bedrock (bedrock-mantle)\" and \"Amazon Bedrock (bedrock-runtime)\".",
+    "summary_generated": true
+  },
+  "572f6db59b04f4425a0140f1799cb047aeb03b29:meta/llama-use-policy": {
+    "doc": "meta/llama-use-policy",
+    "significance": "substantial",
+    "why": "39 lines changed — a large revision, though no obligation wording moved.",
+    "summary": "The page's navigation menu was altered: a long list of product, model, resource and community links was removed, and a \"Skip to content\" link plus a condensed menu bar was added; no policy text changed.",
+    "summary_generated": true
   }
 }
