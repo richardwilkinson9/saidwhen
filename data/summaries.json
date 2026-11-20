@@ -411,5 +411,12 @@
     "why": "39 lines changed — a large revision, though no obligation wording moved.",
     "summary": "The page's navigation menu was altered: a long list of product, model, resource and community links was removed, and a \"Skip to content\" link plus a condensed menu bar was added; no policy text changed.",
     "summary_generated": true
+  },
+  "5edd28a77fdd707dd99fe1f8532dcac620572a2e:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Anthropic added guidance for Claude Code users on which deprecation dates apply and how to migrate, noted that claude-sonnet-4-5 (undated ID) is also retiring, and slightly reworded the retirement-failure sentence.",
+    "summary_generated": true
   }
 }
