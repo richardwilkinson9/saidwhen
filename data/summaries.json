@@ -418,5 +418,12 @@
     "why": "A restriction or obligation was removed or reworded — 1 line containing binding language went away. Loosenings are rarely announced.",
     "summary": "Anthropic added guidance for Claude Code users on which deprecation dates apply and how to migrate, noted that claude-sonnet-4-5 (undated ID) is also retiring, and slightly reworded the retirement-failure sentence.",
     "summary_generated": true
+  },
+  "383bf012585fd58905e1d1d96dbd041340c3f539:anthropic/model-deprecations": {
+    "doc": "anthropic/model-deprecations",
+    "significance": "notable",
+    "why": "A restriction or obligation was removed or reworded — 3 lines containing binding language went away. Loosenings are rarely announced.",
+    "summary": "Anthropic marked Claude Opus 4.5 as deprecated with a January 22, 2027 retirement date, recommending Claude Opus 5.5, and slightly reworded migration guidance, including removal of some Claude Code–specific instructions.",
+    "summary_generated": true
   }
 }
